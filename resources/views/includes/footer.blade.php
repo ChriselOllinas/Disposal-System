@@ -21,5 +21,11 @@
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js') }}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+@if(Session::has('alert'))
+	<script>
+		toastr.success("{!! Session::get('alert')!!}");
+	</script>
+@endif
 </body>
 </html>

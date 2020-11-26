@@ -105,7 +105,7 @@ class HomeController extends Controller
         ]);
 
           // dd($newFileName);
-         return view('newPDF')->with('alert', 'Item has been Created!');;
+         return redirect('newPDF')->with("alert",'PDF has been added');
     }
 
     public function printPDF(){
@@ -162,7 +162,7 @@ class HomeController extends Controller
             $pdf->item_status = $request->get('item_status');
             //dd($pdf);
             $pdf->save();
-            return redirect('printPDF')->with('alert', 'Status has been Updated');
+            return redirect('printPDF')->with("alert",'Status has been updated!');
             // return view('voidModule');  
     }
 
